@@ -1,0 +1,220 @@
+.discount {
+  background: linear-gradient(91.82deg, #FF00F5 11.21%, #87009A 95.96%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 20px 0;
+
+  &__text {
+    font: 700 22px/27px $font;
+    color: $white;
+  }
+}
+
+.hero {
+  &-content {
+    background-color: $white;
+    padding: 13px 0 23px;
+    position: relative;
+    z-index: 1;
+
+    &__title {
+      font: 800 35px/42px $font;
+      color: $default;
+      margin-bottom: 10px;
+    }
+
+    &__subtitle {
+      font: 800 18px/21px $font;
+      color: $default;
+      margin-bottom: 15px;
+      max-width: 250px;
+    }
+
+    &__list {
+      &-item {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+
+        &::before {
+          content: '';
+          width: 9px;
+          height: 9px;
+          background-color: #88009B;
+          border-radius: 50%;
+          flex-shrink: 0;
+          margin-right: 10px;
+        }
+      }
+
+      &-text {
+        font: 500 18px/22px $font;
+        color: $default;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: -39%;
+      width: 181px;
+      height: 357px;
+      background-image: url('../images/dest/hero/product-decor.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+    }
+  }
+
+  &-info {
+    background: linear-gradient(50.34deg, #302520 8.89%, #AB7E6A 114.44%);
+    padding: 46px 30px 60px;
+
+    .link {
+      margin-bottom: 20px;
+    }
+
+  }
+}
+
+.price {
+  position: relative;
+  margin-bottom: 30px;
+
+  &-old {
+    margin-right: 35px;
+
+    &__text {
+      font: 500 18px /22px $font;
+      color: $white;
+      margin-bottom: 3px;
+    }
+
+    &__count {
+      font: 300 54px/65px $font;
+      color: $white;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotate(169deg) translateY(-30px) translateX(8px);
+        width: 100%;
+        height: 5px;
+        background-color: $accent;
+      }
+    }
+  }
+
+  &-current {
+    order: 2;
+
+    &__text {
+      font: 800 18px/22px $font;
+      margin-bottom: 3px;
+      color: $white;
+    }
+
+    &__count {
+      font: 800 54px/65px $font;
+      color: $white;
+    }
+  }
+
+  &::after {
+    content: '';
+    width: 19px;
+    height: 42px;
+    background-image: url('../images/dest/icons/arrow-right.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 35px;
+    order: 1;
+  }
+}
+
+.remainder {
+  padding: 5px;
+  max-width: 420px;
+
+  &__text {
+    text-align: center;
+    color: $white;
+    margin-bottom: 13px;
+    font: 800 18px/22px $font;
+  }
+
+  &-decor {
+    justify-content: center;
+
+    &__line {
+      max-width: 52px;
+      width: 100%;
+      height: 3px;
+      border-radius: 4px;
+      background-color: rgba($white, .5);
+
+      &:first-child {
+        background-color: $accent;
+      }
+
+      &:not(:last-child) {
+        margin-right: 7px;
+      }
+
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-content__title {
+    max-width: 200px;
+  }
+
+  .hero-content__list-text {
+    max-width: 200px;
+  }
+
+  .hero-content::after {
+    top: -7%;
+  }
+}
+
+@media (max-width: 390px) {
+  .price-old {
+    margin-right: 10px;
+  }
+
+  .price::after {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 375px) {
+  .hero-content__list-text {
+    max-width: 180px;
+  }
+
+  .hero-content::after {
+    top: 0%;
+  }
+}
+@media (max-width: 320px) {
+  
+
+  .hero-content__subtitle {
+    margin-bottom: 25px;
+    max-width: 180px;
+  }
+
+  .decoration-items__item-text {
+    word-wrap: break-word;
+    max-width: 145px;
+  }
+}

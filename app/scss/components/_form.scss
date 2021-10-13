@@ -1,0 +1,24 @@
+.form {
+  max-width: 370px;
+  margin: 0 auto;
+
+  .link {
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    font: 400 18px / 24px $font-form;
+    height: 64px;
+    border: 2px solid #147EBA;
+    outline: 2px solid #147EBA;
+    border-radius: 30px;
+
+    &::placeholder {
+      font: 400 18px / 24px $font-form;
+      color: #a9a9a9;
+    }
+  }
+}

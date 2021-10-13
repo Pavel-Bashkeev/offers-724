@@ -1,0 +1,39 @@
+.peculiarities {
+  &-video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &-content {
+    padding: 67px 0 58px;
+    background-image: url('../images/dest/peculiarities/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .container{
+      .link{
+        margin-bottom: 20px;
+      }
+    }
+
+    &__title {
+      color: $white;
+      margin-bottom: 50px;
+    }
+
+    &__list {
+      max-width: 190px;
+      margin-bottom: 115px;
+
+      &-item {
+        font: 600 20px/24px $font;
+        color: $white;
+
+        &:not(:last-child) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}
